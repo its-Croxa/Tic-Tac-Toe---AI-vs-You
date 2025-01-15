@@ -1,0 +1,34 @@
+:root {
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+
+    --nav-bar-width: var(--screen-width);
+    --nav-bar-height: calc(var(--screen-height) * 1/10);
+
+    --game-width: var(--screen-width);
+    --game-height: calc(var(--screen-height) - var(--nav-bar-height) - var(--nav-bottom-height));
+
+    --radious-size-cell: 5vh;
+    --border-size: 0.75vh;
+
+    --nav-bottom-width: var(--screen-width);
+    --nav-bottom-height: calc(var(--screen-height) * 1/20);
+
+    --board-width: calc(var(--game-height) * 1/2);
+    --board-height: var(--board-width);
+
+    --cell-width: calc(var(--board-width) * 1.1/3);
+    --cell-height: var(--cell-width);
+
+    --win-rates-width: var(--board-width);
+    --win-rates-height: calc(var(--game-height) * 1/8);
+
+    --win-rates-width-text: calc(var(--win-rates-width) * 3/4);
+    --win-rates-height-text: calc(var(--win-rates-height) * 3/4);
+
+    --win-status-width-text: calc(var(--win-rates-width-text) * 1/4);
+    --win-status-height-text: var(--win-rates-height-text);
+
+    --restart-button-width: calc(var(--win-status-width-text) * 2);
+    --restart-button-height: calc(var(--win-status-height-text) * 1/2);
+}

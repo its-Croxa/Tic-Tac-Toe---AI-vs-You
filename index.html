@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-center">
+            <div class="title">
+                <h1>Tic-Tac-Toe</h1>
+            </div>
+        </div>
+    </div>
+    <div class="game">
+        <div id="win-status">
+            <h1></h1>
+        </div>  
+        <div class="board">
+            <div class="row">
+                <div id="1:1" class="cell cell-bottom-right radious-top">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>                
+                <div id="2:1" class="cell cell-bottom-right">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+                <div id="3:1" class="cell cell-bottom">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="1:2" class="cell cell-bottom-right">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+                <div id="2:2" class="cell cell-bottom-right">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+                <div id="3:2" class="cell cell-bottom">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="1:3" class="cell cell-right">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+                <div id="2:3" class="cell cell-right">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+                <div id="3:3" class="cell radious-bottom">
+                    <button class="cell-button" onclick="updateCell(this.parentNode.id)">
+                        <h1 class="cell-text"></h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="win-rates">
+            <div class="win-rates-text">
+                <div class="wins-status-text">
+                    <h1 class="label-status-text">Win</h1>
+                    <h1 id="win-stats" class="num-status-text">0</h1>
+                </div>
+                <div class="wins-status-text">
+                    <h1 class="label-status-text">Tie</h1>
+                    <h1 id="ties-stats" class="num-status-text">0</h1>
+                </div>
+                <div class="wins-status-text">
+                    <h1 class="label-status-text">Loss</h1>
+                    <h1 id="loss-stats" class="num-status-text">0</h1>
+                </div>
+            </div>   
+            <br>  
+        </div>
+        <div class="win">
+            <div class="restart-button" id="restart" hidden>
+                <button type="button" onclick="restartGame()">
+                    <h1>New Round</h1>
+                </button>
+            </div> 
+        </div>
+    </div>
+
+    <div class="nav-bottom">
+        <div id="role" class="nav-center">
+            <h1></h1>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+@import url('screen.css');
+@import url('font.css');
+@import url('colour.css');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    color: var(--dark-brown-colour);
+}
+
+body {
+    width: var(--screen-width);
+    height: var(--screen-height);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--dark-blue-colour);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.title h1 {
+    font-size: var(--font-size-title-text);
+}
+
+.win-status h1 {
+    font-size: var(--font-size-win-status);
+}
+
+.game {
+    width: var(--game-width);
+    height: var(--game-height);
+
+    position: relative;
+    top: var(--nav-bar-height);
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: var(--board-width);
+    height: var(--board-height);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: var(--cell-width);
+    height: var(--cell-height);
+
+}
+
+.cell-text {
+    font-size: var(--font-size-cell-text);
+}
+
+.cell:hover {
+    background-color: var(--light-blue-colour);
+}
+
+.cell.win, .cell.win h1 {
+    color: var(--brown-colour);
+    background-color: var(--dark-brown-colour);
+}
+
+.cell.radious-top {
+    border-top-left-radius: var(--radious-size-cell);
+}
+
+.cell.radious-bottom {
+    border-bottom-right-radius: var(--radious-size-cell);
+}
+
+.cell.cell-right {
+    border-right: var(--border-size) solid var(--brown-colour);
+}
+
+.cell.cell-bottom {
+    border-bottom: var(--border-size) solid var(--brown-colour);
+}
+
+.cell.cell-bottom-right {
+    border-right: var(--border-size) solid var(--brown-colour);
+    border-bottom: var(--border-size) solid var(--brown-colour);
+
+}
+
+.win-rates {
+    width: var(--win-rates-width);
+    height: var(--win-rates-height);
+
+    margin-top: var(--win-rates-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-rates-text {
+    width: var(--win-rates-width-text);
+    height: var(--win-rates-height-text);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.wins-status-text {
+    width: var(--win-status-width-text);
+    height: var(--win-status-height-text);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#win-status {
+    font-size: var(--font-size-win-status);
+    margin-bottom: var(--font-size-win-status);
+}
+
+.win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart-button {
+    background-color: aquamarine;
+}
+
+.label-status-text {
+    font-size: var(--font-size-stats-text);
+}
+
+.num-status-text {
+    font-size: var(--font-size-stats-num);
+}
+
+button {
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-bar {
+    width: var(--nav-bar-width);
+    height: var(--nav-bar-height);
+
+    background-color: var(--light-brown-colour);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--nav-bar-button-margin);
+}
+
+.nav-bar *, .nav-bottom * {
+    color: var(--brown-colour);
+}
+
+.nav-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bottom {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--light-brown-colour);
+
+    width: var(--nav-bottom-width);
+    height: var(--nav-bottom-height);
+}
+
+@media screen and (orientation: portrait) {
+    .restart-button {
+        width: var(--restart-button-width);
+        height: calc(var(--restart-button-width) * 1/2);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .restart-button {
+        width: var(--restart-button-width);
+        height: var(--restart-button-height);
+    }
+}
